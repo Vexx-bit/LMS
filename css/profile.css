@@ -1,0 +1,88 @@
+/* Root Variables */
+:root {
+    --color-primary: #213373; /* Dark Blue */
+    --color-secondary: #1B85FB; /* Bright Blue */
+    --color-white: #fff;
+    --color-light: #D3D3D3;
+    --color-black: #000000;
+    --box-shadow-btn: 0 1rem 2rem rgba(0, 0, 0, 0.175);
+}
+  
+/* Profile Card Styling */
+.card {
+    border: none;
+    border-radius: 0.25rem;
+    background-color: var(--color-white);
+    box-shadow: var(--box-shadow-btn);
+    transition: var(--transition);
+    padding: 2rem;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Lift card on hover */
+    box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-title {
+    font-size: 1.75rem;
+    color: var(--color-primary);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: var(--color-black);
+    margin-bottom: 0.5rem;
+}
+
+/* Button Styling */
+.btn {
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+    transition: var(--transition);
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-secondary);
+}
+
+.btn-secondary {
+    background-color: var(--color-light);
+    color: var(--color-black);
+    border: none;
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container-fluid {
+        padding: 0.5rem;
+    }
+
+    .card-body {
+        padding: 1rem;
+    }
+
+    .card-title {
+        font-size: 1.5rem;
+    }
+
+    .btn {
+        font-size: 0.875rem;
+    }
+}

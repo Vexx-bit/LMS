@@ -1,0 +1,198 @@
+/* Root Variables */
+:root {
+    --color-primary: #213373; /* Dark Blue */
+    --color-secondary: #1B85FB; /* Bright Blue */
+    --color-white: #fff;
+    --color-light: #D3D3D3;
+    --color-black: #000000;
+    --color-tab: #ED1E24;
+    --box-shadow-btn: 0 1rem 2rem rgba(0, 0, 0, 0.175);
+    --transition: all 400ms ease;
+    --color-primary-rgba: rgba(33, 51, 115, 0.25);
+    --small-font:0.5rem;
+}
+
+/* Global Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color:var(--color-white);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Navbar Styling */
+.sticky-navbar{
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    height: 4rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1100; 
+    display: flex; 
+    align-items: center;
+    padding: 0 1rem;
+}
+.sticky-navbar .container-fluid{
+    padding-left: 0;
+    margin-left: 0;
+    padding-top:2px;
+    padding-bottom: 2px;
+}
+.sticky-navbar .navbar-brand {
+    font-size: 1.5rem;
+    color: var(--color-white);
+    text-align: left;
+}
+.navbar .navbar-brand:hover{
+    font-size: 1.5rem;
+    color: var(--color-white);
+    margin-right: auto; 
+}
+
+.menu-icon {
+    margin-right: 1rem;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    height: 100vh;
+    position: fixed;
+    top: 4rem;
+    left: 0;
+    width: 100px; 
+    transition: width 0.3s ease;
+    z-index: 1000; 
+    overflow-y: auto;
+}
+
+.sidebar.collapsed {
+    width: 100px; 
+}
+
+.sidebar.expanded {
+    width: 200px; 
+}
+
+.sidebar-links {
+    list-style: none;
+    padding: 0;
+    margin-top: 5px;
+}
+
+.sidebar-links a {
+    padding: 10px;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+}
+
+.sidebar-links a:hover,
+.sidebar-links a.active-link {
+    background-color: var(--color-secondary);
+    border-left: solid 5px var(--color-tab);
+}
+
+.sidebar-icon {
+    font-size: 30px;
+    stroke: var(--color-white); /* Ensures icon color aligns with sidebar */
+    stroke-width: 1.5;
+    
+}
+
+.sidebar-links li .sidebar-text {
+    margin-left: 10px;
+    display: none;
+}
+
+.sidebar.expanded .sidebar-text {
+    display: inline-block;
+    text-align: left;
+}
+
+.sidebar.expanded .sidebar-links li {
+    justify-content: flex-start;
+    margin-right: auto; 
+}
+
+.sidebar-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+}
+/* Container Styling */
+.container {
+    margin-left: 100px; 
+    margin-top: 4rem; 
+    max-width: 1200px;
+    padding: 1rem;
+}
+
+/* Card Styling */
+.card {
+    border: none;
+    border-radius: 0.25rem;
+    background-color: var(--color-white);
+    box-shadow: var(--box-shadow-btn);
+    transition: var(--transition);
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column; 
+    height: 100%; 
+}
+
+.card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    color: var(--color-primary);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.card-text, .list-group-item {
+    font-size: 1rem;
+    color: var(--color-gray);
+}
+
+/* Additional Card Styling for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        padding: 0.5rem; 
+    }
+
+    .card-body {
+        padding: 1rem;
+    }
+
+    .profile-card img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .profile-card h4 {
+        font-size: 1.25rem;
+    }
+
+    .card-title {
+        font-size: 1rem;
+    }
+}

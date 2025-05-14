@@ -1,0 +1,26 @@
+
+/* Table Styling */
+.table {
+    margin-top: 2rem;
+}
+
+.table-bordered th, .table-bordered td {
+    vertical-align: middle;
+    padding: 1rem;
+    border: 1px solid var(--color-light);
+}
+
+.table-primary {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+@media (max-width: 768px) {
+    .table-responsive {
+        overflow-x: auto; /* Allow horizontal scrolling on smaller screens */
+    }
+
+    .table-bordered th, .table-bordered td {
+        padding: 0.5rem; /* Smaller padding for mobile */
+    }
+}
